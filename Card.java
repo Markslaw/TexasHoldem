@@ -5,29 +5,36 @@ package TexasHoldem;
  */
 public class Card {
 
-    private int suit;
     private int value;
+    private int suit;
 
     //getters
+    public int getValue(){
+        return value;
+    }
+
     public int getSuit(){
         return suit;
     }
 
-    public int getValue(){
-        return value
-    }
-
     //setters
-    public void setSuit(int suit){
-        this.suit = suit;
-    }
-
     public void setValue(int value){
         this.value = value;
     }
 
+    public void setSuit(int suit){
+        this.suit = suit;
+    }
+
     //2 arguement constructor
-    public Card
+    public Card (int value, int suit){
+        setValue(value);
+        setSuit(suit);
+    }
 
-
+    //no arguement constructor
+    public Card (){
+        this(0,0);
+    }
 }
+

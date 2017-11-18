@@ -25,5 +25,10 @@ public class TexasHoldemDriver {
 
 
         }
+
+        Deck deck = new Deck();
+        JTextArea output = new JTextArea();
+        output.append
+
     }
 }
