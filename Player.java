@@ -1,8 +1,6 @@
 package TexasHoldem;
 
-/**
- * Created by mark on 08/11/2017.
- */
+
 public class Player {
     private String name;
     private double balance;
@@ -37,13 +35,12 @@ public class Player {
     }
 
     //no arguement constructor
-    public Player(){this ("unknown",0);}
+    public Player (){this ("unknown",0);}
 
 
     public String toString() {
-       String text = "\nName " + getName() + "\nBalance" + getBalance();
-       return text;
+        String text = "\nName " + getName() + "\nBalance" + getBalance();
+        return text;
     }
 }
-
 
