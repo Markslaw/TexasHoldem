@@ -1,5 +1,7 @@
 package TexasHoldem;
 
+import java.util.Random;
+
 /**
  * Created by mark on 18/11/2017.
  */
@@ -8,7 +10,7 @@ package TexasHoldem;
 
 
 public class Deck {
-   private Card[] deck = new Card[52];
+    private Card[] deck = new Card[52];
 
 
     public Deck(Card[] deck) {
@@ -19,11 +21,24 @@ public class Deck {
             }
         }
     }
-
-
-
-    public static void main(String[] args) {
-        for(int i=0;i<52;i++)
-        System.out.println("your card is value" + cards[i].toString );
+/*learned about randomising an array from a stackoverflow.com*/
+    public void shuffle() {
+        int length = deck.length;
+        Random random = new Random();
+        for (int i = 0; i < length; i++) {
+            int swap = i + random.nextInt(length - i);
+            swapCards(i, swap);
+        }
     }
-}
+
+        public void swapCards(int i, int swap){
+            Card temp = deck[i];
+            deck[i] = deck[swap];
+            deck[swap] = temp;
+        }
+
+
+    }
+
+
+

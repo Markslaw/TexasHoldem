@@ -26,9 +26,13 @@ public class TexasHoldemDriver {
 
         }
 
-        Deck deck = new Deck();
-        JTextArea output = new JTextArea();
-        output.append
+
+        for (int i = 0; i <52; i++)
+            JOptionPane.showMessageDialog(null, "");
+
+
+
 
     }
+
 }
